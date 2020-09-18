@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>My todo list</title>
+  </head>
+  <body>
+    <div id="cointainer">
+      <nav>
+        <p>Bienvenido <span class="user-name">Ginner</span></p>
+      </nav>
+      <main>
+        <div id="folders">
+          <form id="form-folder">
+            <input
+              type="text"
+              name="folder-name"
+              id="folder-name"
+              placeholder="Your new folder"
+            />
+            <input type="submit" value="Create new" />
+          </form>
+          <div class="card"></div>
+        </div>
+        <div id="tasks" class="card">
+          <form id="form-task">
+            <input
+              type="text"
+              name="task-name"
+              id="task-name"
+              placeholder="Your task"
+            />
+            <input type="date" name="task-date" id="task-date" />
+            <select name="task-priority" id="task-priority">
+              <option value="urgent">urgent</option>
+              <option value="normal">normal</option>
+            </select>
+            <input type="submit" value="+" />
+          </form>
+          <div id="task-container"></div>
+        </div>
+      </main>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
