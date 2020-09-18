@@ -12,10 +12,12 @@ $folderForm.addEventListener("submit", (e) => {
   }
   const folder = new Folder($title.value);
   foldersArray.push(folder);
-  console.log(foldersArray);
   $title.value = "";
   Folder.renderFolders();
   Folder.setCurrentFolder(folder);
+  let folders = document.querySelectorAll(".folder");
+  folders[folders.length - 1].classList.add("active");
+  folders[folders.length - 1].lastChild.src = "./img/delete-white.svg";
 });
 
 const $taskForm = document.getElementById("form-task");
