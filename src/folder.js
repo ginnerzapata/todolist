@@ -24,18 +24,21 @@ class Folder {
     $folder.appendChild($div);
     $div.addEventListener("click", () => {
       currentFolder = this;
-      console.log(currentFolder.id);
       this.renderTasks();
       let foldersClass = document.querySelectorAll(".folder");
       foldersClass.forEach((f) => (f.classList.value = "folder"));
+      let delButtons = document.querySelectorAll(".delete");
+      delButtons.forEach((button) => (button.src = "./img/delete.svg"));
       if (!$div.classList.value.includes("active")) {
         $div.classList.add("active");
+        $delete.src = "./img/delete-white.svg";
       } else return;
     });
   }
 
   delete() {
-    console.log("deleted");
+    foldersArray = foldersArray.filter((folder) => folder.id !== this.id);
+    Folder.renderFolders();
   }
 
   renderTasks() {
@@ -50,10 +53,7 @@ class Folder {
   }
 }
 
-const foldersArray = [
-  new Folder("Chores"),
-  new Folder("movies I want to watch"),
-];
+let foldersArray = [new Folder("Test Folder")];
 let currentFolder = foldersArray[0];
 
 export { Folder, foldersArray, currentFolder };
