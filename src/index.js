@@ -15,6 +15,7 @@ $folderForm.addEventListener("submit", (e) => {
   console.log(foldersArray);
   $title.value = "";
   Folder.renderFolders();
+  Folder.setCurrentFolder(folder);
 });
 
 const $taskForm = document.getElementById("form-task");

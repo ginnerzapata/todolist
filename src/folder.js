@@ -24,6 +24,7 @@ class Folder {
     $folder.appendChild($div);
     $div.addEventListener("click", () => {
       currentFolder = this;
+      currentFolder.active = false;
       this.renderTasks();
       let foldersClass = document.querySelectorAll(".folder");
       foldersClass.forEach((f) => (f.classList.value = "folder"));
@@ -50,6 +51,9 @@ class Folder {
   static renderFolders() {
     $folder.innerHTML = "";
     foldersArray.forEach((folder) => folder.render());
+  }
+  static setCurrentFolder(folder) {
+    currentFolder = folder;
   }
 }
 
