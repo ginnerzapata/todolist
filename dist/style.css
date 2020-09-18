@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #4044c9;
+}
+
+nav {
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 40px;
+  align-items: center;
+}
+
+main {
+  min-height: calc(100vh - 80px);
+  background: #ffffff;
+  border-radius: 32px 0px 0px 0px;
+  padding: 40px;
+  display: flex;
+}
+
+#folders {
+  flex: 4;
+  margin-right: 24px;
+}
+
+#tasks {
+  flex: 8;
+}
+
+.card {
+  background: white;
+  box-shadow: 0px 10px 20px rgba(64, 68, 201, 0.2);
+  border-radius: 24px;
+  padding: 32px;
+}
+.folder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fcfcfc;
+  border-radius: 8px;
+  padding: 16px 24px;
+  color: #7b7b7b;
+  margin-bottom: 24px;
+}
+
+.folder.active {
+  background: #4044c9;
+  color: white;
+  box-shadow: 0px 5px 10px #91a9ff;
+}
+.folder.active:hover {
+  border: none;
+}
+.folder:hover {
+  border: 1px solid #4044c9;
+  cursor: pointer;
+}
+
+.task {
+  display: flex;
+  background: #fcfcfc;
+  padding: 16px 18px;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.task-name {
+  flex: 8;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.task-info {
+  flex: 4;
+  display: flex;
+  justify-content: flex-end;
+}
+.task-info > * {
+  margin-left: 20px;
+  font-size: 12px;
+}
+.task-info > p {
+  margin: auto;
+  color: #4044c9;
+}
+
+.badge {
+  display: flex;
+  padding: 4px 8px;
+  border: 1px solid #4044c9;
+  border-radius: 4px;
+  color: #4044c9;
+}
+
+.urgent {
+  background: #4044c9;
+  color: white;
+}
+/* Forms */
+form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+input[type="text"] {
+  flex: 1;
+}
+input[type="text"],
+input[type="date"],
+select {
+  border: none;
+  border-bottom: 2px solid #4044c9;
+  margin: 0 24px;
+}
+
+input[type="submit"] {
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  color: white;
+  background: #4044c9;
+}
+
+input[type="submit"]:hover {
+  box-shadow: 0px 5px 10px #91a9ff;
+}
+
+#tasks input[type="submit"] {
+  width: 40px;
+}
+/* Typography */
+nav p {
+  color: white;
+}
+
+nav span {
+  font-weight: bold;
+}
+.done {
+  text-decoration: line-through;
+  color: #a0a0a0;
+}
+.task-name p {
+  margin-left: 16px;
+}
+
+/*Icons*/
+
+.delete,
+.edit {
+  cursor: pointer;
+}
