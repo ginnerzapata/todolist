@@ -42,3 +42,5 @@ $taskForm.addEventListener("submit", (e) => {
 });
 
 Folder.renderFolders();
+const user = prompt(`what's your first name?`);
+document.querySelector(".user-name").innerText = user || "User";
